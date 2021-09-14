@@ -10,6 +10,7 @@ COPY package*.json ./
 
 # Executes commands
 RUN npm ci
+RUN npm run build
 
 # Copies files from source to destination, in this case the root of the build context
 # into the root of the WORKDIR
@@ -19,4 +20,4 @@ COPY . .
 EXPOSE 3000
 
 # Command to use for starting the application
-CMD ["npm", "run start"]
+CMD ["npm", "run" ,"start"]
